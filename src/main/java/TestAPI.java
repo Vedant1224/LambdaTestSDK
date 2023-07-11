@@ -51,7 +51,7 @@ public class TestAPI {
         throw new HTTPException(ApiConstants.HTTP_EXCEPTION_MESSAGE + httpResponse.statusCode());
     }
 
-    public BuildIdResponse fetchRecordedVideo(String testId) throws HTTPException {
+    public TestResponse fetchRecordedVideo(String testId) throws HTTPException {
 
         HttpRequest httpRequest = HttpRequest.newBuilder()
                 .uri(URI.create(ApiConstants.BASE_URL + getTestApiUrl() + "/" + testId + "/" + ApiConstants.HEADER_VIDEO))
@@ -64,7 +64,7 @@ public class TestAPI {
 
         if (httpResponse != null) {
             String responseBody = httpResponse.body();
-            return gson.fromJson(responseBody, BuildIdResponse.class);
+            return gson.fromJson(responseBody, TestResponse.class);
         }
 
         throw new HTTPException(ApiConstants.HTTP_EXCEPTION_MESSAGE + httpResponse.statusCode());
@@ -77,6 +77,4 @@ public class TestAPI {
             throw new HTTPException(ApiConstants.ERROR_500_DESCRIPTION);
         }
     }
-
-
 }

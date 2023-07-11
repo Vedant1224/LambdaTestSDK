@@ -8,7 +8,7 @@ import org.junit.jupiter.api.Test;
 public class BuildAPITest {
 
     private BuildAPI buildAPI;
-    private static final int buildId = 15869773;// Enter a Build ID
+    private static final int buildId = 16606169;// Enter a Build ID
 
     @BeforeEach
     public void setUp() {

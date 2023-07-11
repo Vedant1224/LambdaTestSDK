@@ -41,7 +41,8 @@ public class TestAPITest {
 
         try {
             // Invoke the method being tested
-            BuildIdResponse response = testAPI.fetchRecordedVideo(testId);
+            TestResponse response = testAPI.fetchRecordedVideo(testId);
+            System.out.println(response);
 
             // Assertions
             Assertions.assertNotNull(response);

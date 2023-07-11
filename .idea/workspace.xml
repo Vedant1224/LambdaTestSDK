@@ -5,8 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="15be9242-e8d2-4260-9445-d112529670e0" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/TestAPI.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Response.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Response.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/TestAPI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/TestAPI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/BuildAPITest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/BuildAPITest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/TestAPITest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TestAPITest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,20 +35,17 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_directory_selection": "/Users/vedantgupta/Documents/LambdaTest_Project/LambdaTest_SDK/src/test/java"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_directory_selection&quot;: &quot;/Users/vedantgupta/Documents/LambdaTest_Project/LambdaTest_SDK/src/test/java&quot;
   }
-}]]></component>
-  <component name="RunManager" selected="JUnit.TestAPITest">
-    <configuration name="BuildAPITest.testDeleteBuild" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+}</component>
+  <component name="RunManager" selected="Application.TestAPI">
+    <configuration name="TestAPI" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="TestAPI" />
       <module name="LambdaTest_SDK" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="BuildAPITest" />
-      <option name="METHOD_NAME" value="testDeleteBuild" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -60,11 +60,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestAPITest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="BuildAPITest.testGetSpecificBuildData" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="LambdaTest_SDK" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="TestAPITest" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="MAIN_CLASS_NAME" value="BuildAPITest" />
+      <option name="METHOD_NAME" value="testGetSpecificBuildData" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BuildAPITest.testPatchName" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="LambdaTest_SDK" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="BuildAPITest" />
+      <option name="METHOD_NAME" value="testPatchName" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -79,23 +90,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestAPITest.testUploadExceptionLogs" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="LambdaTest_SDK" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="TestAPITest" />
-      <option name="METHOD_NAME" value="testUploadExceptionLogs" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.TestAPITest" />
+        <item itemvalue="Application.TestAPI" />
         <item itemvalue="JUnit.TestAPITest.testFetchRecordedVideo" />
-        <item itemvalue="JUnit.TestAPITest.testUploadExceptionLogs" />
-        <item itemvalue="JUnit.BuildAPITest.testDeleteBuild" />
         <item itemvalue="JUnit.BuildAPITest.testFetchAllBuilds" />
+        <item itemvalue="JUnit.BuildAPITest.testPatchName" />
+        <item itemvalue="JUnit.BuildAPITest.testGetSpecificBuildData" />
       </list>
     </recent_temporary>
   </component>

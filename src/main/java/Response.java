@@ -1,54 +1,3 @@
-/**
- * The BuildIdResponse class represents a response containing one builds.
- * Built for the getSpecificBuildData method
- */
-class BuildIdResponse {
-    public Response data;
-    public String message;
-    public String status;
-
-    /**
-     * Gets the message associated with the response.
-     * @return message
-     */
-    public String getMessage() {
-        return this.message;
-    }
-
-    /**
-     * Gets the status of the response.
-     * @return status
-     */
-    public String getStatus() {
-        return this.status;
-    }
-}
-
-/**
- * The BuildIdResponse class represents a response containing several builds.
- * Built for the fetchAllBuilds method
- */
-class BuildIdResponses {
-    public Response[] data;
-    public String message;
-    public String status;
-
-    /**
-     * Gets the message associated with the response.
-     * @return message
-     */
-    public String getMessage() {
-        return this.message;
-    }
-
-    /**
-     * Gets the status of the response.
-     * @return status
-     */
-    public String getStatus() {
-        return this.status;
-    }
-}
 
 /**
  * Represents a single build response.
@@ -118,27 +67,5 @@ public class Response {
      */
     public String getEndTimestamp() {
         return this.end_timestamp;
-    }
-}
-
-class TestResponse{
-    public boolean data;
-    public String message;
-    public String status;
-
-    /**
-     * Gets the message associated with the response.
-     * @return message
-     */
-    public String getMessage() {
-        return this.message;
-    }
-
-    /**
-     * Gets the status of the response.
-     * @return status
-     */
-    public String getStatus() {
-        return this.status;
     }
 }
