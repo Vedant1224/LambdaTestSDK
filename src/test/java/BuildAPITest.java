@@ -8,13 +8,13 @@ import org.junit.jupiter.api.Test;
 public class BuildAPITest {
 
     private BuildAPI buildAPI;
-    private static final int buildId = 16606169;// Enter a Build ID
+    private static final int buildId = 0;// Enter a Build ID
 
     @BeforeEach
     public void setUp() {
         // Initialize the BuildAPI instance with dummy credentials
         // You can enter you own credentials and try it out
-        buildAPI = new BuildAPI("vedantg", "oqqNJaT8rZL0C3wuMTIlIhujqogN1yh5DB56pCNTSdO5b7bJjH");
+        buildAPI = new BuildAPI("", "");
     }
 
     /**

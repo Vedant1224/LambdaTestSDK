@@ -7,21 +7,23 @@ import java.util.List;
 public class TestAPITest {
 
     private TestAPI testAPI;
+    private String testId;
 
     @BeforeEach
     public void setUp() {
         // Initialize the TestAPI instance with dummy credentials
         // You can enter your own credentials and try it out
-        testAPI = new TestAPI("vedantg", "oqqNJaT8rZL0C3wuMTIlIhujqogN1yh5DB56pCNTSdO5b7bJjH");
+        testAPI = new TestAPI("", "");
+        // You can enter your own testId
+        testId = "";
     }
 
     @Test
     public void testUploadExceptionLogs() {
-        String testId = "YAAS1-TG8LA-UZOVZ-2X3CU";
         List<String> exceptions = new ArrayList<>();
         exceptions.add("exception 1");
         exceptions.add("exception 2");
-       // exceptions.add("expection 3");
+        exceptions.add("exception 3");
         try {
             // Invoke the method being tested
             TestResponse response = testAPI.uploadExceptionLogs(testId, exceptions);
@@ -37,7 +39,6 @@ public class TestAPITest {
 
     @Test
     public void testFetchRecordedVideo() {
-        String testId = "YAAS1-TG8LA-UZOVZ-2X3CU";
 
         try {
             // Invoke the method being tested
