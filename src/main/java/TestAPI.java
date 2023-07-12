@@ -1,6 +1,4 @@
-import com.google.gson.Gson;
 import java.net.URI;
-import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 import java.util.List;
@@ -8,15 +6,12 @@ import java.util.HashMap;
 import java.util.Map;
 
 
-public class TestAPI {
-    private final HttpClient httpClient;
+public class TestAPI extends DependencyProvider {
     private final Credentials credentials;
-    private final Gson gson;
 
     public TestAPI(String userName, String password) {
-        httpClient = HttpClient.newBuilder().build();
+        super();
         credentials = new Credentials(userName, password);
-        gson = new Gson();
     }
 
     public String getTestApiUrl() {
@@ -69,7 +64,7 @@ public class TestAPI {
 
         throw new HTTPException(ApiConstants.HTTP_EXCEPTION_MESSAGE + httpResponse.statusCode());
     }
-    private HttpResponse<String> sendRequest(HttpRequest httpRequest) throws HTTPException {
+    protected HttpResponse<String> sendRequest(HttpRequest httpRequest) throws HTTPException {
         try {
             return httpClient.send(httpRequest, HttpResponse.BodyHandlers.ofString());
         } catch (Exception e) {

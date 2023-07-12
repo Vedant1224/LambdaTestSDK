@@ -1,21 +1,14 @@
 /** Importing all dependencies*/
 import java.net.URI;
-import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
-import java.time.Duration;
 import java.time.LocalDate;
 import java.time.temporal.ChronoUnit;
-import com.google.gson.Gson;
 
+public class BuildAPI extends DependencyProvider{
 
-
-public class BuildAPI {
-
-    /*Fields to store the data */
-    private final HttpClient httpClient;
+    /*Field to store the data */
     private final Credentials credentials;
-    private final Gson gson;
 
     /**
      * Constructs a new BuildAPI instance with the provided userName and password.
@@ -24,14 +17,9 @@ public class BuildAPI {
      * @param password password credential
      */
     public BuildAPI(String userName, String password) {
-        // Create a new instance of HttpClient
-        httpClient = HttpClient.newBuilder()
-                .connectTimeout(Duration.ofSeconds(ApiConstants.REQUEST_TIMEOUT))
-                .build();
-
+        super();
         // Create a new instance of Credentials with the provided userName and password
         credentials = new Credentials(userName, password);
-        gson = new Gson();
     }
 
     /**
@@ -40,7 +28,7 @@ public class BuildAPI {
      * @param httpRequest HTTP request to be sent
      * @return response
      */
-    private HttpResponse<String> sendRequest(HttpRequest httpRequest) throws HTTPException {
+    protected HttpResponse<String> sendRequest(HttpRequest httpRequest) throws HTTPException {
         try {
             // Send the HTTP request using HttpClient and return the response
             return httpClient.send(httpRequest, HttpResponse.BodyHandlers.ofString());
