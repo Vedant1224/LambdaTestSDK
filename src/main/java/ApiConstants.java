@@ -20,5 +20,7 @@ public class ApiConstants {
 
     public static final String HEADER_VIDEO = "video";
     public static final String HEADER_EXCEPTIONS = "exceptions";
+
+    public static final String TUNNEL_ENDPOINT = "automation/api/v1/tunnels/";
 }
 
