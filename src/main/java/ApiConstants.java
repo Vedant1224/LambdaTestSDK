@@ -22,5 +22,7 @@ public class ApiConstants {
     public static final String HEADER_EXCEPTIONS = "exceptions";
     public static final String TUNNEL_ENDPOINT = "automation/api/v1/tunnels/";
     public static final String PLATFORM_ENDPOINT = "automation/api/v1/platforms";
+
+    public static final String ORGANISATION_ENDPOINT = "automation/api/v1/org/concurrency";
 }
 

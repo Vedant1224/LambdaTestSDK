@@ -18,7 +18,6 @@ public class PlatformAPI extends DependencyProvider {
                 .build();
 
         HttpResponse<String> httpResponse = sendRequest(httpRequest);
-        System.out.println(httpResponse);
 
         if (httpResponse != null) {
             String responseBody = httpResponse.body();
@@ -36,23 +35,4 @@ public class PlatformAPI extends DependencyProvider {
             throw new HTTPException(ApiConstants.ERROR_500_DESCRIPTION);
         }
     }
-
-    public static void main(String[] args) {
-        // Create an instance of PlatformAPI
-        PlatformAPI platformAPI = new PlatformAPI();
-
-        try {
-            // Call the fetchPlatforms method and store the returned value
-            PlatformResponse response = platformAPI.fetchPlatforms();
-
-            // Print the returned value
-            System.out.println(response);
-        } catch (HTTPException e) {
-            e.printStackTrace();
-            System.out.println("Exception occurred: " + e.getMessage());
-        }
-    }
-
-
-
 }
