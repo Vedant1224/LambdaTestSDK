@@ -7,7 +7,7 @@
     <list default="true" id="15be9242-e8d2-4260-9445-d112529670e0" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ApiConstants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ApiConstants.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/PlatformAPI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PlatformAPI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/OrganisationAPI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/OrganisationAPI.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,7 +44,7 @@
     "project.structure.side.proportion": "0.0"
   }
 }]]></component>
-  <component name="RunManager" selected="Application.OrganisationAPI">
+  <component name="RunManager" selected="Application.ResolutionsAPI">
     <configuration name="OrganisationAPI" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="OrganisationAPI" />
       <module name="LambdaTest_SDK" />
@@ -54,6 +54,13 @@
     </configuration>
     <configuration name="PlatformAPI" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="PlatformAPI" />
+      <module name="LambdaTest_SDK" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ResolutionsAPI" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ResolutionsAPI" />
       <module name="LambdaTest_SDK" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -76,23 +83,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="BuildAPITest.testFetchAllBuilds" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="LambdaTest_SDK" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="BuildAPITest" />
-      <option name="METHOD_NAME" value="testFetchAllBuilds" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.ResolutionsAPI" />
         <item itemvalue="Application.OrganisationAPI" />
         <item itemvalue="Application.PlatformAPI" />
         <item itemvalue="Application.TunnelAPI" />
         <item itemvalue="JUnit.BuildAPITest.testDeleteBuild" />
-        <item itemvalue="JUnit.BuildAPITest.testFetchAllBuilds" />
       </list>
     </recent_temporary>
   </component>
@@ -161,7 +158,14 @@
       <option name="project" value="LOCAL" />
       <updated>1689229522705</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Convert Project to Maven">
+      <created>1689247114727</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1689247114727</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">

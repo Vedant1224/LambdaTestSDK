@@ -38,7 +38,8 @@ public class OrganisationAPI extends DependencyProvider {
     }
 
     public static void main(String[] args) {
-        OrganisationAPI organisationAPI = new OrganisationAPI("vedantg","oqqNJaT8rZL0C3wuMTIlIhujqogN1yh5DB56pCNTSdO5b7bJjH");
+        // Enter your own credentials and try it out
+        OrganisationAPI organisationAPI = new OrganisationAPI("","");
 
         try {
             OrganisationResponse response = organisationAPI.fetchOrganisationConcurrency();
