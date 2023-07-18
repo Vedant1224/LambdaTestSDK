@@ -26,5 +26,7 @@ public class ApiConstants {
     public static final String ORGANISATION_ENDPOINT = "automation/api/v1/org/concurrency";
 
     public static final String RESOLUTION_ENDPOINT = "automation/api/v1/resolutions";
+
+    public static final String SESSION_ENDPOINT = "automation/api/v1/sessions";
 }
 

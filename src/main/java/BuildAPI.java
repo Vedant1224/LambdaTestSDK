@@ -217,7 +217,7 @@ public class BuildAPI extends DependencyProvider{
     }
 
     public static void main(String[] args){
-        BuildAPI buildAPI = new BuildAPI("vedantg", "oqqNJaT8rZL0C3wuMTIlIhujqogN1yh5DB56pCNTSdO5b7bJjH");
+        BuildAPI buildAPI = new BuildAPI("", "");
         System.out.println(buildAPI);
     }
 }
