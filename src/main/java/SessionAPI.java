@@ -112,6 +112,45 @@ public class SessionAPI extends DependencyProvider {
         throw new HTTPException(ApiConstants.HTTP_EXCEPTION_MESSAGE + httpResponse.statusCode());
     }
 
+    public SessionVideoResponse getVideo(String sessionId) throws HTTPException {
+
+        HttpRequest httpRequest = HttpRequest.newBuilder()
+                .uri(URI.create(ApiConstants.BASE_URL + ApiConstants.SESSION_ENDPOINT + "/"+ sessionId + "/"+ "video"))
+                .GET()
+                .header(ApiConstants.HEADER_ACCEPT, ApiConstants.APPLICATION_JSON)
+                .header(ApiConstants.HEADER_AUTHORIZATION, ApiConstants.BASIC + credentials.generateKey())
+                .build();
+
+        HttpResponse<String> httpResponse = sendRequest(httpRequest);
+
+        if (httpResponse != null) {
+            String responseBody = httpResponse.body();
+            return gson.fromJson(responseBody, SessionVideoResponse.class);
+        }
+
+        throw new HTTPException(ApiConstants.HTTP_EXCEPTION_MESSAGE + httpResponse.statusCode());
+    }
+
+    public SessionCommandResponse getCommandLogs(String sessionId) throws HTTPException {
+
+        HttpRequest httpRequest = HttpRequest.newBuilder()
+                .uri(URI.create(ApiConstants.BASE_URL + ApiConstants.SESSION_ENDPOINT + "/"+ sessionId + "/"+ "log" + "command"))
+                .GET()
+                .header(ApiConstants.HEADER_ACCEPT, ApiConstants.APPLICATION_JSON)
+                .header(ApiConstants.HEADER_AUTHORIZATION, ApiConstants.BASIC + credentials.generateKey())
+                .build();
+
+        HttpResponse<String> httpResponse = sendRequest(httpRequest);
+
+        if (httpResponse != null) {
+            String responseBody = httpResponse.body();
+            return gson.fromJson(responseBody, SessionCommandResponse.class);
+        }
+
+        throw new HTTPException(ApiConstants.HTTP_EXCEPTION_MESSAGE + httpResponse.statusCode());
+    }
+
+    
     protected HttpResponse<String> sendRequest(HttpRequest httpRequest) throws HTTPException {
         try {
             return httpClient.send(httpRequest, HttpResponse.BodyHandlers.ofString());
@@ -123,18 +162,19 @@ public class SessionAPI extends DependencyProvider {
 
     public static void main(String[] args) {
         // Initialize the SessionAPI instance with your credentials
-        SessionAPI sessionAPI = new SessionAPI("", "");
+        SessionAPI sessionAPI = new SessionAPI("vedantg", "oqqNJaT8rZL0C3wuMTIlIhujqogN1yh5DB56pCNTSdO5b7bJjH");
         String sessionId = "YAAS1-TG8LA-UZOVZ-2X3CU";
 
         try {
             // Invoke the getSessionDetails method
-            SessionScreenshotResponse response = sessionAPI.getScreenshots(sessionId);
+            SessionVideoResponse response = sessionAPI.getVideo(sessionId);
 
             // Print the output
             System.out.println("Get Session Details Response:");
             System.out.println("Message: " + response.getMessage());
             System.out.println("Status: " + response.getStatus());
             System.out.println("Url: " + response.getUrl());
+            System.out.println("Video url :"+ response.getVideoUrl());
         } catch (HTTPException e) {
             e.printStackTrace();
         }

@@ -1,3 +1,4 @@
+import java.util.List;
 class SessionData {
     private String test_id;
     private int build_id;
@@ -192,4 +193,113 @@ class SessionScreenshotResponse{
         return url;
     }
 
+}
+
+class SessionVideoResponse{
+
+    public String url;
+    public String message;
+    public String status;
+    public String view_video_url;
+
+    public String getMessage() {
+        return message;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public String getUrl() {
+        return url;
+    }
+
+    public String getVideoUrl(){
+        return view_video_url;
+    }
+
+}
+
+ class SessionCommandResponse {
+    private List<CommandData> data;
+
+    public List<CommandData> getData() {
+        return data;
+    }
+
+    public static class CommandData {
+        private String logType;
+        private String testID;
+        private int status;
+        private long timestamp;
+        private CommandValue Value;
+
+        public String getLogType() {
+            return logType;
+        }
+
+        public String getTestID() {
+            return testID;
+        }
+
+        public int getStatus() {
+            return status;
+        }
+
+        public long getTimestamp() {
+            return timestamp;
+        }
+
+        public CommandValue getValue() {
+            return Value;
+        }
+    }
+
+    public static class CommandValue {
+        private String requestId;
+        private long RequestStartTime;
+        private String requestMethod;
+        private String requestPath;
+        private int duration;
+        private String requestBody;
+        private String responseBody;
+        private String responseStatus;
+        private String screenshotId;
+
+        public String getRequestId() {
+            return requestId;
+        }
+
+        public long getRequestStartTime() {
+            return RequestStartTime;
+        }
+
+        public String getRequestMethod() {
+            return requestMethod;
+        }
+
+        public String getRequestPath() {
+            return requestPath;
+        }
+
+        public int getDuration() {
+            return duration;
+        }
+
+        public String getRequestBody() {
+            return requestBody;
+        }
+
+        public String getResponseBody() {
+            return responseBody;
+        }
+
+        public String getResponseStatus() {
+            return responseStatus;
+        }
+
+        public String getScreenshotId() {
+            return screenshotId;
+        }
+    }
 }

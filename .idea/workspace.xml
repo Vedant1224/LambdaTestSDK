@@ -7,8 +7,8 @@
     <list default="true" id="15be9242-e8d2-4260-9445-d112529670e0" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ApiConstants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ApiConstants.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/OrganisationAPI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/OrganisationAPI.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/SessionAPI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/SessionAPI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/SessionResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/SessionResponse.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,6 +53,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="LightHouseAPI" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="LightHouseAPI" />
+      <module name="LambdaTest_SDK" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="OrganisationAPI" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="OrganisationAPI" />
       <module name="LambdaTest_SDK" />
@@ -63,16 +70,6 @@
     <configuration name="SessionAPI" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="SessionAPI" />
       <module name="LambdaTest_SDK" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="SessionAPITest.testPatchName" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="LambdaTest_SDK" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="SessionAPITest" />
-      <option name="METHOD_NAME" value="testPatchName" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -90,10 +87,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.SessionAPI" />
+        <item itemvalue="Application.LightHouseAPI" />
         <item itemvalue="Application.OrganisationAPI" />
         <item itemvalue="Application.BuildAPI" />
         <item itemvalue="JUnit.SessionAPITest.testStopSession" />
-        <item itemvalue="JUnit.SessionAPITest.testPatchName" />
       </list>
     </recent_temporary>
   </component>
@@ -176,7 +173,14 @@
       <option name="project" value="LOCAL" />
       <updated>1689332415675</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Convert Project to Maven">
+      <created>1689678708468</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1689678708468</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
