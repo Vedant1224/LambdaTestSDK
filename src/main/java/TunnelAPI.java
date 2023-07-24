@@ -33,10 +33,10 @@ public class TunnelAPI extends DependencyProvider {
         throw new HTTPException(ApiConstants.HTTP_EXCEPTION_MESSAGE + httpResponse.statusCode());
     }
 
-    public TunnelResponse deleteRunningTunnels() throws HTTPException {
+    public TunnelResponse deleteRunningTunnels(int tunnelId) throws HTTPException {
 
         HttpRequest httpRequest = HttpRequest.newBuilder()
-                .uri(URI.create(ApiConstants.BASE_URL + ApiConstants.TUNNEL_ENDPOINT + tunnelId))
+                .uri(URI.create(ApiConstants.BASE_URL + ApiConstants.TUNNEL_ENDPOINT +"/"+ tunnelId))
                 .DELETE()
                 .header(ApiConstants.HEADER_ACCEPT, ApiConstants.APPLICATION_JSON)
                 .header(ApiConstants.HEADER_AUTHORIZATION, ApiConstants.BASIC + credentials.generateKey())
@@ -71,7 +71,7 @@ public class TunnelAPI extends DependencyProvider {
 
             try {
                 // Call the fetchRunningTunnels method and store the returned value
-                TunnelResponse response = tunnelAPI.deleteRunningTunnels();
+                TunnelResponse response = tunnelAPI.deleteRunningTunnels(0);
 
                 // Print the response
                 System.out.println("Message: " + response.getMessage());

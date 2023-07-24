@@ -40,8 +40,8 @@ public class LightHouseAPI extends DependencyProvider{
 
     public static void main(String[] args) {
         // Initialize the SessionAPI instance with your credentials
-        LightHouseAPI lighthouseAPI = new LightHouseAPI("vedantg", "oqqNJaT8rZL0C3wuMTIlIhujqogN1yh5DB56pCNTSdO5b7bJjH");
-        String sessionId = "YAAS1-TG8LA-UZOVZ-2X3CU";
+        LightHouseAPI lighthouseAPI = new LightHouseAPI("", "");
+        String sessionId = "";
 
         try {
             // Invoke the getSessionDetails method

@@ -12,7 +12,7 @@ public class ExtensionsAPI extends DependencyProvider{
         credentials = new Credentials(userName, password);
     }
 
-    public ExtensionsResponse fetchAllExtensions() throws  HTTPException {
+    public ExtensionsResponse fetchAllExtensions() throws HTTPException {
 
         // Build the HTTP request for retrieving specific build data
         HttpRequest httpRequest = HttpRequest.newBuilder()
@@ -32,11 +32,13 @@ public class ExtensionsAPI extends DependencyProvider{
         throw new HTTPException(ApiConstants.HTTP_EXCEPTION_MESSAGE+httpResponse.statusCode());
     }
 
-    public DeleteExtensionsResponse deleteExtension(String key) throws HTTPException {
+    public DeleteExtensionsResponse deleteExtension(String file_path) throws HTTPException {
+
+        String requestBody = "{\"file_path\":\"" + file_path + "\"}";
         // Build the HTTP request for deleting a build
         HttpRequest httpRequest = HttpRequest.newBuilder()
-                .uri(URI.create(ApiConstants.BASE_URL + ApiConstants.EXTENSIONS_ENDPOINT + "/delete?key=" + key))
-                .DELETE()
+                .uri(URI.create(ApiConstants.BASE_URL + ApiConstants.EXTENSIONS_ENDPOINT + "/delete"))
+                .method("DELETE", HttpRequest.BodyPublishers.ofString(requestBody))
                 .header(ApiConstants.HEADER_ACCEPT, ApiConstants.APPLICATION_JSON)
                 .header(ApiConstants.HEADER_AUTHORIZATION, ApiConstants.BASIC + credentials.generateKey())
                 .header(ApiConstants.HEADER_CONTENT_TYPE, ApiConstants.APPLICATION_JSON)
@@ -62,7 +64,7 @@ public class ExtensionsAPI extends DependencyProvider{
     }
 
     public static void main(String[] args) {
-        ExtensionsAPI extensionsAPI = new ExtensionsAPI("vedantg", "oqqNJaT8rZL0C3wuMTIlIhujqogN1yh5DB56pCNTSdO5b7bJjH");
+        ExtensionsAPI extensionsAPI = new ExtensionsAPI("", "");
 
         try {
             // Delete an extension and print the response
