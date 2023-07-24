@@ -45,9 +45,9 @@
     "project.structure.side.proportion": "0.0"
   }
 }]]></component>
-  <component name="RunManager" selected="Application.SessionAPI">
-    <configuration name="BuildAPI" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="BuildAPI" />
+  <component name="RunManager" selected="Application.UserFilesAPI">
+    <configuration name="ExtensionsAPI" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ExtensionsAPI" />
       <module name="LambdaTest_SDK" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -74,23 +74,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SessionAPITest.testStopSession" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="UserFilesAPI" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="UserFilesAPI" />
       <module name="LambdaTest_SDK" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="SessionAPITest" />
-      <option name="METHOD_NAME" value="testStopSession" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.UserFilesAPI" />
+        <item itemvalue="Application.ExtensionsAPI" />
         <item itemvalue="Application.SessionAPI" />
         <item itemvalue="Application.LightHouseAPI" />
         <item itemvalue="Application.OrganisationAPI" />
-        <item itemvalue="Application.BuildAPI" />
-        <item itemvalue="JUnit.SessionAPITest.testStopSession" />
       </list>
     </recent_temporary>
   </component>
@@ -180,7 +177,14 @@
       <option name="project" value="LOCAL" />
       <updated>1689678708468</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Convert Project to Maven">
+      <created>1689837053028</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1689837053028</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">

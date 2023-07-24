@@ -220,86 +220,86 @@ class SessionVideoResponse{
 
 }
 
- class SessionCommandResponse {
-    private List<CommandData> data;
+    class SessionCommandResponse {
+        private List<LogResponseData> data;
 
-    public List<CommandData> getData() {
-        return data;
-    }
-
-    public static class CommandData {
-        private String logType;
-        private String testID;
-        private int status;
-        private long timestamp;
-        private CommandValue Value;
-
-        public String getLogType() {
-            return logType;
-        }
-
-        public String getTestID() {
-            return testID;
-        }
-
-        public int getStatus() {
-            return status;
-        }
-
-        public long getTimestamp() {
-            return timestamp;
-        }
-
-        public CommandValue getValue() {
-            return Value;
+        public List<LogResponseData> getData() {
+            return data;
         }
     }
 
-    public static class CommandValue {
-        private String requestId;
-        private long RequestStartTime;
-        private String requestMethod;
-        private String requestPath;
-        private int duration;
-        private String requestBody;
-        private String responseBody;
-        private String responseStatus;
-        private String screenshotId;
+ class LogResponseData {
+            private String logType;
+            private String testID;
+            private int status;
+            private long timestamp;
+            private LogResponseValue Value;
 
-        public String getRequestId() {
-            return requestId;
+            public String getLogType() {
+                return logType;
+            }
+
+            public String getTestID() {
+                return testID;
+            }
+
+            public int getStatus() {
+                return status;
+            }
+
+            public long getTimestamp() {
+                return timestamp;
+            }
+
+            public LogResponseValue getValue() {
+                return Value;
+            }
         }
 
-        public long getRequestStartTime() {
-            return RequestStartTime;
-        }
+ class LogResponseValue {
+            private String requestId;
+            private long RequestStartTime;
+            private String requestMethod;
+            private String requestPath;
+            private int duration;
+            private String requestBody;
+            private String responseBody;
+            private String responseStatus;
+            private String screenshotId;
 
-        public String getRequestMethod() {
-            return requestMethod;
-        }
+            public String getRequestId() {
+                return requestId;
+            }
 
-        public String getRequestPath() {
-            return requestPath;
-        }
+            public long getRequestStartTime() {
+                return RequestStartTime;
+            }
 
-        public int getDuration() {
-            return duration;
-        }
+            public String getRequestMethod() {
+                return requestMethod;
+            }
 
-        public String getRequestBody() {
-            return requestBody;
-        }
+            public String getRequestPath() {
+                return requestPath;
+            }
 
-        public String getResponseBody() {
-            return responseBody;
-        }
+            public int getDuration() {
+                return duration;
+            }
 
-        public String getResponseStatus() {
-            return responseStatus;
-        }
+            public String getRequestBody() {
+                return requestBody;
+            }
 
-        public String getScreenshotId() {
-            return screenshotId;
+            public String getResponseBody() {
+                return responseBody;
+            }
+
+            public String getResponseStatus() {
+                return responseStatus;
+            }
+
+            public String getScreenshotId() {
+                return screenshotId;
+            }
         }
-    }
-}

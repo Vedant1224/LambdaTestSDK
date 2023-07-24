@@ -134,7 +134,7 @@ public class SessionAPI extends DependencyProvider {
     public SessionCommandResponse getCommandLogs(String sessionId) throws HTTPException {
 
         HttpRequest httpRequest = HttpRequest.newBuilder()
-                .uri(URI.create(ApiConstants.BASE_URL + ApiConstants.SESSION_ENDPOINT + "/"+ sessionId + "/"+ "log" + "command"))
+                .uri(URI.create(ApiConstants.BASE_URL + ApiConstants.SESSION_ENDPOINT + "/"+ sessionId + "/"+ "log" +"/"+ "command"))
                 .GET()
                 .header(ApiConstants.HEADER_ACCEPT, ApiConstants.APPLICATION_JSON)
                 .header(ApiConstants.HEADER_AUTHORIZATION, ApiConstants.BASIC + credentials.generateKey())
@@ -150,7 +150,7 @@ public class SessionAPI extends DependencyProvider {
         throw new HTTPException(ApiConstants.HTTP_EXCEPTION_MESSAGE + httpResponse.statusCode());
     }
 
-    
+
     protected HttpResponse<String> sendRequest(HttpRequest httpRequest) throws HTTPException {
         try {
             return httpClient.send(httpRequest, HttpResponse.BodyHandlers.ofString());
@@ -167,14 +167,13 @@ public class SessionAPI extends DependencyProvider {
 
         try {
             // Invoke the getSessionDetails method
-            SessionVideoResponse response = sessionAPI.getVideo(sessionId);
+            SessionCommandResponse response = sessionAPI.getCommandLogs(sessionId);
 
             // Print the output
             System.out.println("Get Session Details Response:");
-            System.out.println("Message: " + response.getMessage());
-            System.out.println("Status: " + response.getStatus());
-            System.out.println("Url: " + response.getUrl());
-            System.out.println("Video url :"+ response.getVideoUrl());
+            System.out.println("Message: " + response.getData());
+           // System.out.println("Status: " + response.getStatus());
+            System.out.println("Data: " + response.getData().getClass());
         } catch (HTTPException e) {
             e.printStackTrace();
         }

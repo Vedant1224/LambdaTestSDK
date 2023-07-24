@@ -30,5 +30,13 @@ public class ApiConstants {
     public static final String SESSION_ENDPOINT = "automation/api/v1/sessions";
 
     public static final String LIGHTHOUSE_ENDPOINT = "automation/api/v1/lighthouse/report";
+
+    public static final String EXTENSIONS_ENDPOINT = "automation/api/v1/files/extensions";
+
+    public static final String USERFILES_ENDPOINT = "automation/api/v1/user-files";
+
+    public static final String PROJECT_ENDPOINT = "automation/api/v1/projects";
+
+    public static final String PRERUN_ENDPOINT ="automation/api/v1/files";
 }
 
