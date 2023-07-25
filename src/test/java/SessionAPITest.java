@@ -17,10 +17,10 @@ public class SessionAPITest {
     }
 
     @Test
-    public void testGetSessionDetails() {
+    public void testGetParticularSessionDetails() {
         try {
             // Invoke the method being tested
-            SessionResponse response = sessionAPI.getSessionDetails(sessionId);
+            SessionResponse response = sessionAPI.getParticularSessionDetails(sessionId);
 
             // Assertions
             Assertions.assertNotNull(response);
@@ -35,7 +35,7 @@ public class SessionAPITest {
     public void testDeleteSession() {
         try {
             // Invoke the method being tested
-            SessionResponse response = sessionAPI.deleteSession(sessionId);
+            SessionDeleteResponse response = sessionAPI.deleteSession(sessionId);
 
             // Assertions
             Assertions.assertNotNull(response);
@@ -53,7 +53,7 @@ public class SessionAPITest {
 
         try {
             // Invoke the method being tested
-            SessionResponse response = sessionAPI.patchName(sessionId, newName, newStatus);
+            SessionUpdateResponse response = sessionAPI.patchName(sessionId, newName, newStatus);
 
             // Assertions
             Assertions.assertNotNull(response);
@@ -68,7 +68,7 @@ public class SessionAPITest {
     public void testStopSession() {
         try {
             // Invoke the method being tested
-            SessionResponse response = sessionAPI.stopSession(sessionId);
+            SessionStopResponse response = sessionAPI.stopSession(sessionId);
 
             // Assertions
             Assertions.assertNotNull(response);

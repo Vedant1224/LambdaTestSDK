@@ -5,7 +5,6 @@ class SessionData {
     private String name;
     private int user_id;
     private String username;
-    private String test_type;
     private int duration;
     private String platform;
     private String browser;
@@ -21,10 +20,8 @@ class SessionData {
     private String network_logs_url;
     private String command_logs_url;
     private String selenium_logs_url;
-    private String video_url;
     private String screenshot_url;
-    private GeoInfo geoInfo;
-    private String public_url;
+    private String video_url;
 
     public String getTest_id() {
         return test_id;
@@ -44,10 +41,6 @@ class SessionData {
 
     public String getUsername() {
         return username;
-    }
-
-    public String getTest_type() {
-        return test_type;
     }
 
     public int getDuration() {
@@ -117,44 +110,7 @@ class SessionData {
     public String getScreenshot_url() {
         return screenshot_url;
     }
-
-    public GeoInfo getGeoInfo() {
-        return geoInfo;
-    }
-
-    public String getPublic_url() {
-        return public_url;
-    }
 }
-
-    class GeoInfo {
-        private String country;
-        private String provider;
-        private String region;
-        private String regionName;
-        private String state;
-
-        public String getCountry() {
-            return country;
-        }
-
-        public String getProvider() {
-            return provider;
-        }
-
-        public String getRegion() {
-            return region;
-        }
-
-        public String getRegionName() {
-            return regionName;
-        }
-
-        public String getState() {
-            return state;
-        }
-    }
-
 
 
 public class SessionResponse {
@@ -303,3 +259,133 @@ class SessionVideoResponse{
                 return screenshotId;
             }
         }
+
+class SeleniumLogResponse {
+
+    private List<SeleniumLogData> data;
+
+    private String message;
+    private String status;
+
+    public List<SeleniumLogData> getData() {
+        return data;
+    }
+
+    public String getMessage(){
+        return message;
+    }
+
+    public String getStatus(){
+        return status;
+    }
+
+    public static class SeleniumLogData {
+        private String logType;
+        private String testID;
+        private int status;
+        private long timestamp;
+        private SeleniumLogResponseValue value;
+
+        public String getLogType() {
+            return logType;
+        }
+
+        public String getTestID() {
+            return testID;
+        }
+
+        public int getStatus() {
+            return status;
+        }
+
+        public long getTimestamp() {
+            return timestamp;
+        }
+
+        public SeleniumLogResponseValue getValue() {
+            return value;
+        }
+    }
+
+    public static class SeleniumLogResponseValue {
+        private String level;
+        private String message;
+        private long timestamp;
+
+        public String getLevel() {
+            return level;
+        }
+
+        public String getMessage() {
+            return message;
+        }
+
+        public long getTimestamp() {
+            return timestamp;
+        }
+    }
+}
+
+class SessionDeleteResponse {
+    private String message;
+    private String status;
+
+    public String getMessage(){
+        return message;
+    }
+
+    public String getStatus(){
+        return status;
+    }
+}
+
+class SessionUpdateResponse {
+    private String message;
+    private String status;
+
+    public String getMessage(){
+        return message;
+    }
+
+    public String getStatus(){
+        return status;
+    }
+}
+
+class SessionStopResponse {
+    private String message;
+    private String status;
+
+    private String url;
+
+    public String getMessage(){
+        return message;
+    }
+
+    public String getStatus(){
+        return status;
+    }
+
+    public String getUrl(){
+        return url;
+    }
+}
+
+class SessionUploadResponse {
+    private String data;
+
+    private String message;
+    private String status;
+
+    public String getData(){
+        return data;
+    }
+
+    public String getMessage(){
+        return message;
+    }
+
+    public String getStatus(){
+        return status;
+    }
+}
