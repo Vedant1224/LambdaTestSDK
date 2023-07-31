@@ -5,7 +5,7 @@ import java.net.http.HttpResponse;
 import java.time.LocalDate;
 import java.time.temporal.ChronoUnit;
 
-public class BuildAPI extends DependencyProvider{
+public class BuildAPI extends DependencyProvider {
 
     /*Field to store the data */
     private final Credentials credentials;
@@ -114,7 +114,7 @@ public class BuildAPI extends DependencyProvider{
             // Using fromJson() method to convert json to java object
             return gson.fromJson(responseBody, BuildIdResponses.class);
         }
-        throw new HTTPException(ApiConstants.HTTP_EXCEPTION_MESSAGE+httpResponse.statusCode());
+        throw new HTTPException(ApiConstants.HTTP_EXCEPTION_MESSAGE + httpResponse.statusCode());
     }
 
     /**
@@ -146,7 +146,7 @@ public class BuildAPI extends DependencyProvider{
 
             return gson.fromJson(responseBody, BuildIdResponse.class);
         }
-        throw new HTTPException(ApiConstants.HTTP_EXCEPTION_MESSAGE+httpResponse.statusCode());
+        throw new HTTPException(ApiConstants.HTTP_EXCEPTION_MESSAGE + httpResponse.statusCode());
     }
 
     /**
@@ -178,7 +178,7 @@ public class BuildAPI extends DependencyProvider{
 
             return gson.fromJson(responseBody, BuildIdResponse.class);
         }
-        throw new HTTPException(ApiConstants.HTTP_EXCEPTION_MESSAGE+httpResponse.statusCode());
+        throw new HTTPException(ApiConstants.HTTP_EXCEPTION_MESSAGE + httpResponse.statusCode());
     }
 
     /**
@@ -213,11 +213,43 @@ public class BuildAPI extends DependencyProvider{
 
             return gson.fromJson(responseBody, BuildIdResponse.class);
         }
-        throw new HTTPException(ApiConstants.HTTP_EXCEPTION_MESSAGE+httpResponse.statusCode());
+        throw new HTTPException(ApiConstants.HTTP_EXCEPTION_MESSAGE + httpResponse.statusCode());
     }
 
-    public static void main(String[] args){
-        BuildAPI buildAPI = new BuildAPI("", "");
-        System.out.println(buildAPI);
+    /**
+     * Main method to demonstrate how to use the LambdaTest SDK to fetch and display
+     * information about a specific build from LambdaTest's automation API.
+     */
+    public static void main(String[] args) {
+        // Replace the empty strings with your actual LambdaTest username and password
+        String userName = "your_username_here";
+        String password = "your_password_here";
+
+        // Create an instance of the BuildAPI class with the provided credentials
+        BuildAPI buildAPI = new BuildAPI(userName, password);
+        try {
+            // Replace the buildId with the ID of the specific build you want to retrieve details for
+            int buildId = 16648943;
+
+            // Call the getSpecificBuildData() method to fetch information about the specific build
+            BuildIdResponse buildResponse = buildAPI.getSpecificBuildData(buildId);
+
+            // Access the Response object from the buildResponse to retrieve build details
+            Response buildData = buildResponse.getData();
+
+            // Print the retrieved build information
+            System.out.println("Build ID: " + buildData.getBuildId());
+            System.out.println("Build Name: " + buildData.getBuildName());
+            System.out.println("User ID: " + buildData.getUserId());
+            System.out.println("Username: " + buildData.getUserName());
+            System.out.println("Status ID: " + buildData.getStatusId());
+            System.out.println("Create Timestamp: " + buildData.getCreateTimestamp());
+            System.out.println("End Timestamp: " + buildData.getEndTimestamp());
+            System.out.println("Tags: " + buildData.getTags());
+
+        } catch (ValidationException | HTTPException e) {
+            // Handle any validation or HTTP exception that may occur during the API call
+            e.printStackTrace();
+        }
     }
 }
