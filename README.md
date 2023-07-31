@@ -23,40 +23,37 @@ To use the LambdaTestSDK in your Java project, you can follow these steps:
 Below is an example code snippet that demonstrates how to use the LambdaTestSDK to change the name of a build:
 
 ```java
-public static void main(String[] args) {
-    // Replace the empty strings with your actual username and password
-    String userName = "your_username_here";
-    String password = "your_password_here";
+ public static void main(String[] args) {
+        // Replace the empty strings with your actual username and password
+        String userName = "";
+        String password = "";
 
-    BuildAPI buildAPI = new BuildAPI(userName, password);
-    try {
-        // Replace the buildId with the ID of the specific build you want to update
-        int buildId = 12345;
+        BuildAPI buildAPI = new BuildAPI(userName, password);
+        try {
+            // Replace the buildId with the ID of the specific build you want to update
+            int buildId = 16648943;
 
-        // Replace the newName and status with the values you want to update
-        String newName = "New Build Name";
-        String status = "active"; // Or any other status you want
+            // Update the name and/or status of the build using patchName() method
+            BuildIdResponse buildResponse = buildAPI.getSpecificBuildData(buildId);
 
-        // Update the name and/or status of the build using patchName() method
-        BuildIdResponse buildResponse = buildAPI.patchName(buildId, newName, status);
+            // Access the Response data from the buildResponse, if needed
+            Response buildData = buildResponse.getData();
 
-        // Access the Response data from the buildResponse, if needed
-        Response buildData = buildResponse.data;
+            // Print the updated build data or any other information you want
+            System.out.println("Build ID: " + buildData.getBuildId());
+            System.out.println("Build Name: " + buildData.getBuildName());
+            System.out.println("User ID: " + buildData.getUserId());
+            System.out.println("Username: " + buildData.getUserName());
+            System.out.println("Status ID: " + buildData.getStatusId());
+            System.out.println("Create Timestamp: " + buildData.getCreateTimestamp());
+            System.out.println("End Timestamp: " + buildData.getEndTimestamp());
+            System.out.println("Tags: " + buildData.getTags());
 
-        // Print the updated build data or any other information you want
-        System.out.println("Build ID: " + buildData.getBuildId());
-        System.out.println("Build Name: " + buildData.getBuildName());
-        System.out.println("User ID: " + buildData.getUserId());
-        System.out.println("Username: " + buildData.getUserName());
-        System.out.println("Status ID: " + buildData.getStatusId());
-        System.out.println("Create Timestamp: " + buildData.getCreateTimestamp());
-        System.out.println("End Timestamp: " + buildData.getEndTimestamp());
-
-        // You can access other attributes of Response as well, if needed
-    } catch (ValidationException | HTTPException e) {
-        e.printStackTrace();
+            // You can access other attributes of Response as well, if needed
+        } catch (ValidationException | HTTPException e) {
+            e.printStackTrace();
+        }
     }
-}
 ```
 
 # LambdaTest API Documentation
