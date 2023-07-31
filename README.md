@@ -23,23 +23,28 @@ To use the LambdaTestSDK in your Java project, you can follow these steps:
 Below is an example code snippet that demonstrates how to use the LambdaTestSDK to change the name of a build:
 
 ```java
- public static void main(String[] args) {
-        // Replace the empty strings with your actual username and password
-        String userName = "";
-        String password = "";
+  /**
+     * Main method to demonstrate how to use the LambdaTest SDK to fetch and display
+     * information about a specific build from LambdaTest's automation API.
+     */
+    public static void main(String[] args) {
+        // Replace the empty strings with your actual LambdaTest username and password
+        String userName = "your_username_here";
+        String password = "your_password_here";
 
+        // Create an instance of the BuildAPI class with the provided credentials
         BuildAPI buildAPI = new BuildAPI(userName, password);
         try {
-            // Replace the buildId with the ID of the specific build you want to update
+            // Replace the buildId with the ID of the specific build you want to retrieve details for
             int buildId = 16648943;
 
-            // Update the name and/or status of the build using patchName() method
+            // Call the getSpecificBuildData() method to fetch information about the specific build
             BuildIdResponse buildResponse = buildAPI.getSpecificBuildData(buildId);
 
-            // Access the Response data from the buildResponse, if needed
+            // Access the Response object from the buildResponse to retrieve build details
             Response buildData = buildResponse.getData();
 
-            // Print the updated build data or any other information you want
+            // Print the retrieved build information
             System.out.println("Build ID: " + buildData.getBuildId());
             System.out.println("Build Name: " + buildData.getBuildName());
             System.out.println("User ID: " + buildData.getUserId());
@@ -48,9 +53,9 @@ Below is an example code snippet that demonstrates how to use the LambdaTestSDK 
             System.out.println("Create Timestamp: " + buildData.getCreateTimestamp());
             System.out.println("End Timestamp: " + buildData.getEndTimestamp());
             System.out.println("Tags: " + buildData.getTags());
-
-            // You can access other attributes of Response as well, if needed
+            
         } catch (ValidationException | HTTPException e) {
+            // Handle any validation or HTTP exception that may occur during the API call
             e.printStackTrace();
         }
     }
