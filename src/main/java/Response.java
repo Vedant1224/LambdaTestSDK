@@ -1,3 +1,4 @@
+import java.util.List;
 
 /**
  * Represents a single build response.
@@ -10,6 +11,7 @@ public class Response {
     private String status_ind;
     private String create_timestamp;
     private String end_timestamp;
+    private List<String> tags;
 
     /**
      * Gets the build ID.
@@ -68,4 +70,6 @@ public class Response {
     public String getEndTimestamp() {
         return this.end_timestamp;
     }
+
+    public List<String> getTags(){return tags;}
 }
