@@ -16,27 +16,17 @@ public class ApiConstants {
     public static final String HTTP_EXCEPTION_MESSAGE = "Connection Unsuccessful. Status Code: ";
     public static final String DATE_EXCEPTION_MESSAGE = "Difference between fromDate and toDate cannot exceed 90 days.";
     public static final String ERROR_500_DESCRIPTION = "The server encountered an unexpected condition or error that prevented it from fulfilling the request. This error is typically caused by a problem on the server-side. Clients receiving a 500 error should retry the request at a later time or contact the server administrators for assistance.";
-
-
     public static final String HEADER_VIDEO = "video";
     public static final String HEADER_EXCEPTIONS = "exceptions";
     public static final String TUNNEL_ENDPOINT = "automation/api/v1/tunnels";
     public static final String PLATFORM_ENDPOINT = "automation/api/v1/platforms";
-
     public static final String ORGANISATION_ENDPOINT = "automation/api/v1/org/concurrency";
-
     public static final String RESOLUTION_ENDPOINT = "automation/api/v1/resolutions";
-
     public static final String SESSION_ENDPOINT = "automation/api/v1/sessions";
-
     public static final String LIGHTHOUSE_ENDPOINT = "automation/api/v1/lighthouse/report";
-
     public static final String EXTENSIONS_ENDPOINT = "automation/api/v1/files/extensions";
-
     public static final String USERFILES_ENDPOINT = "automation/api/v1/user-files";
-
     public static final String PROJECT_ENDPOINT = "automation/api/v1/projects";
-
     public static final String PRERUN_ENDPOINT ="automation/api/v1/files";
 }
 
