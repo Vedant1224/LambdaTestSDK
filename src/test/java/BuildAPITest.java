@@ -26,8 +26,8 @@ public class BuildAPITest {
             // Invoke the method being tested
             BuildIdResponse response = buildAPI.getSpecificBuildData(buildId);
             // Assertions
-            Assertions.assertNotNull(response.data);
-            Assertions.assertEquals(buildId, response.data.getBuildId());
+            Assertions.assertNotNull(response.getData());
+            Assertions.assertEquals(buildId, response.getData().getBuildId());
             // Add more assertions to validate the response as needed
         } catch ( ValidationException | HTTPException e) {
             e.printStackTrace();
