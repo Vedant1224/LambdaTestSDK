@@ -14,7 +14,7 @@ public class BuildAPITest {
     public void setUp() {
         // Initialize the BuildAPI instance with dummy credentials
         // You can enter you own credentials and try it out
-        buildAPI = new BuildAPI("", "");
+        buildAPI = new BuildAPI("vedantg", "oqqNJaT8rZL0C3wuMTIlIhujqogN1yh5DB56pCNTSdO5b7bJjH");
     }
 
     /**
