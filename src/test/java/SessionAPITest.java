@@ -11,9 +11,9 @@ public class SessionAPITest {
     public void setUp() {
         // Initialize the SessionAPI instance with dummy credentials
         // You can enter your own credentials and try it out
-        sessionAPI = new SessionAPI("vedantg", "oqqNJaT8rZL0C3wuMTIlIhujqogN1yh5DB56pCNTSdO5b7bJjH");
+        sessionAPI = new SessionAPI("", "");
         // You can enter your own sessionId
-        sessionId = "YAAS1-TG8LA-UZOVZ-2X3CU";
+        sessionId = "";
     }
 
     @Test
