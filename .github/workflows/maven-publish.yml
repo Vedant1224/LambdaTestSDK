@@ -6,9 +6,9 @@ name: Maven Package
 on:
   pull_request:
     branches:
-      - main  # Run the workflow when pull requests are created or updated on the 'main' branch
+      - main  
   release:
-    types: [created]  # Run the workflow when a new release is created
+    types: [created]  
 
 jobs:
   build:
